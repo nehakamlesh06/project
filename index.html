@@ -1,111 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FitLife Gym</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitForce Gym</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
     }
     header {
-      background-color: #111;
-      color: #fff;
-      padding: 1em;
+      background-color: #1b1b1b;
+      color: white;
+      padding: 20px 0;
       text-align: center;
     }
     nav {
-      background-color: #444;
+      background-color: #333;
       display: flex;
       justify-content: center;
-      padding: 0.5em;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      padding: 14px 20px;
       text-decoration: none;
+      text-transform: uppercase;
       font-weight: bold;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: #555;
     }
     section {
-      padding: 40px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .home img, .about img, .offers img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 10px;
-    }
-    .contact-form input, .contact-form textarea {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-    }
-    footer {
-      background-color: #111;
-      color: white;
-      text-align: center;
-      padding: 1em;
+    h2 {
+      color: #222;
+      margin-bottom: 20px;
     }
     .offers {
-      background-color: #f9f9f9;
-      padding: 30px;
+      background-color: #fffbe6;
+      border-left: 5px solid #ffc107;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .offers ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .offers li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+    .offers img {
+      width: 100%;
       border-radius: 10px;
       margin-top: 20px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    .contact-form input[type="submit"] {
+      background-color: #1b1b1b;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .contact-form input[type="submit"]:hover {
+      background-color: #333;
+    }
+    footer {
+      background-color: #1b1b1b;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>FitLife Gym</h1>
-    <p>Train Hard, Stay Fit!</p>
+    <h1>FitForce Gym</h1>
+    <p>Your Health, Our Mission</p>
   </header>
 
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About Us</a>
+    <a href="#offers">Special Offers</a>
     <a href="#contact">Contact Us</a>
   </nav>
 
-  <section id="home" class="home">
-    <h2>Welcome to FitLife Gym</h2>
-    <p>Your fitness journey starts here. Join our community and transform your life!</p>
-    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc03b" alt="Gym Workout">
+  <section id="home">
+    <h2>Welcome to FitForce Gym</h2>
+    <p>Achieve your fitness goals with world-class equipment, expert trainers, and an energetic environment.</p>
   </section>
 
-  <section id="about" class="about">
+  <section id="about">
     <h2>About Us</h2>
-    <p>FitLife Gym offers modern equipment, certified trainers, and a friendly environment to help you reach your goals.</p>
-    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Gym Interior">
+    <p>FitForce Gym has been a trusted fitness destination for over 10 years, helping thousands get stronger, healthier, and happier. From personalized training to group sessions, we offer it all under one roof.</p>
   </section>
 
-  <section class="offers">
-    <h2>Special Offers</h2>
+  <section id="offers" class="offers">
+    <h2>🎁 Special Offers</h2>
     <ul>
-      <li>🎉 Join now and get 1 month free!</li>
-      <li>💪 Student discount: 20% off all plans</li>
-      <li>🏋️‍♂️ Refer a friend and get a free gym bag</li>
+      <li>1️⃣ Get 1 Month FREE on a 6-month membership</li>
+      <li>2️⃣ 25% OFF for Students and Senior Citizens</li>
+      <li>3️⃣ Bring a friend & get a ₹500 reward!</li>
     </ul>
-    <img src="https://images.unsplash.com/photo-1583454110551-21c7d37fb34d" alt="Special Offer Gym">
+    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Special offer image">
   </section>
 
-  <section id="contact" class="contact-form">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <input type="submit" value="Send Message">
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message" />
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 FitLife Gym. All rights reserved.</p>
+    <p>&copy; 2025 FitForce Gym. All rights reserved.</p>
   </footer>
 
 </body>
